@@ -1,0 +1,44 @@
+@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    @layer base {
+      body {
+        @apply bg-gray-50 dark:bg-asphalt-gray text-primary dark:text-white font-thin;
+      }
+    }
+
+    @layer components {
+      .metric-card {
+        @apply bg-asphalt-gray dark:bg-gray-700 rounded-lg p-6 shadow-lg transition-transform duration-300;
+      }
+
+      .chart-container {
+        @apply bg-asphalt-gray dark:bg-gray-700 p-6 rounded-lg shadow-lg;
+      }
+    }
+
+    @layer utilities {
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .logo-filter {
+        filter: var(--logo-filter);
+      }
+
+      .scale-102 {
+        transform: scale(1.02);
+      }
+
+      .input-border-gradient {
+        border-top-left-radius: 0.375rem;
+        border-top-left-width: 2px;
+        border-image: linear-gradient(to right, #8B0080, #C0C0C0, #4B0082) 1;
+      }
+    }
